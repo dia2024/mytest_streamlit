@@ -19,9 +19,9 @@ with col2:
 columns = st.columns([1.1, 1.0, 0.9])
 image_files = ['boy.png', 'fever.png', 'user.png']
 image_captions =['아이', '열병', '사용자']
-folder = 'C:\\Users\\diamo\\Documents\\데이터분석\\웹앱\\'
+
 for k in range(len(columns)):
     with columns[k]:
         st.subheader(image_captions[k])
-        image_local = Image.open(folder+image_files[k])
+        image_local = Image.open(image_files[k])
         st.image(image_local, caption=image_captions[k])
