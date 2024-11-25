@@ -12,4 +12,5 @@ import matplotlib.pyplot as plt
 temp=bc['color'].value_counts()
 fig= plt.figure(figsize=(7,5))
 plt.bar(x=temp.index, height=temp.values)
+plt.xticks(temp.index, ['GS', 'CU', 'Seven', 'Emart'])
 st.pyplot(fig)
