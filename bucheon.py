@@ -6,5 +6,10 @@ import pandas as pd
 bc = pd.read_csv('bucheon.csv')
 st.title('부천시 편의점 위치')
 st.dataframe(bc)
-temp=bc['color'].value_counts().plot(kind='bar')
-st.pyplot(temp)
+
+import matplotlib.pyplot as plt
+
+temp=bc['color'].value_counts()
+fig= plt.figure(figsize=(7,5))
+plt.bar(x=temp.index, height=temp.values)
+st.pyplot(fig)
