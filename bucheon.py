@@ -1,8 +1,8 @@
 import streamlit as st
-from streamlit_folium import folium_static
+
 import pandas as pd
-from folium.plugins import HeatMap
-import folium
+# from folium.plugins import HeatMap
+# import folium
 bc = pd.read_csv('bucheon.csv')
 st.title('부천시 편의점 위치')
 st.dataframe(bc)
